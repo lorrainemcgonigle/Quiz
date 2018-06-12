@@ -1,0 +1,31 @@
+<div>
+    This is an {{QuizType}}
+</div>
+<!-- <div>
+<table *ngIf = 'persons && persons.length'>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Location</th>
+    <tr *ngFor = 'let person of persons'>
+        <td>{{person.name}}</td>
+        <td>{{person.age}}</td>
+        <td>{{person.location}}</td>
+    </tr>
+    </table>
+</div>
+    <img *ngIf = 'showImage' [src] = 'imageURL' [style.width.px] = 'width'/><br/>
+    <button (click) = 'toggleShow()'>{{showImage? 'Hide' : 'Show'}} Image</button>
+<div>
+    <label>Filter By</label>
+    <input type="text" [(ngModel)] = 'listFilter'/>
+    <button>Filter</button><br/>
+    <label>Filtered By: {{listFilter}}</label>
+    
+</div> -->
+<button (click) = 'getQuestions()'>GET</button>
+<tr *ngFor = 'let question of questions'>
+    <td>{{question.results[0].question}}</td><br />
+    <td>{{question.results[0].incorrect_answers}}</td><br />
+    <td>{{question.results[0].correct_answer}}</td>
+</tr>
+    
