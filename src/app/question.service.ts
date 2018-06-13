@@ -10,9 +10,9 @@ import { question } from './question';
 })
 export class questionService {
 
-  private questionsUrl = 'https://opentdb.com/api.php?amount=10&category=10&difficulty=easy&type=multiple';
+  private questionsUrl = 'https://opentdb.com/api.php?amount=1&category=17&type=multiple';
   constructor(private http:Http) { }
-  
+
   getQuestionsWithObservable()  {
     return this.http.get(this.questionsUrl)
         .toPromise().then(resp => resp.json())
@@ -21,6 +21,7 @@ export class questionService {
         })
         
     }
+    
     
 
    

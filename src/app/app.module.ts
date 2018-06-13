@@ -7,6 +7,7 @@ import { FormsModule} from '@angular/forms';
 import { HttpModule, Response } from '@angular/http';
 import { questionService } from './question.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,6 +17,8 @@ import { questionService } from './question.service';
     BrowserModule,
     FormsModule,
     HttpModule
+    
+
   ],
   providers: [
     questionService

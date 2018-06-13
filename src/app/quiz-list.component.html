@@ -22,10 +22,23 @@
     <label>Filtered By: {{listFilter}}</label>
     
 </div> -->
-<button (click) = 'getQuestions()'>GET</button>
+
+<button (click) = 'getQuestions()'>GET</button><br />
 <tr *ngFor = 'let question of questions'>
     <td>{{question.results[0].question}}</td><br />
-    <td>{{question.results[0].incorrect_answers}}</td><br />
-    <td>{{question.results[0].correct_answer}}</td>
+    <!-- <div>
+        <input type="radio">{{question.results[0].incorrect_answers[0]}}<br />
+        <input type="radio">{{question.results[0].incorrect_answers[1]}}<br />
+        <input type="radio">{{question.results[0].incorrect_answers[2]}}<br />
+        <input type="radio">{{question.results[0].correct_answer}}<br />
+    </div> -->
+    <div *ngFor = 'let answer of answers'>
+        <input type="radio" name="option">{{answer}}<br/>
+    </div>
+    <button (click) = 'submitAnswer()'>Answer</button>
+    <!-- <div>
+        Answer : {{question.results[0].correct_answer}}
+    </div> -->
 </tr>
+
     
